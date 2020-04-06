@@ -18,5 +18,8 @@ def hello():
     print('%s : %d' %('나이',25))
     print('강아지'+'고양이')
     print('Dog'*5)
-    
+    print('hello','Dog','Cat','LeeJiChan',sep='#')
+    print('Hello', end='#')
+
+
 hello()
