@@ -14,5 +14,9 @@ def hello():
     print("Hello world")
     print(5+7)
     print(5,"+", 7, "=", 5+7)
+    print('나이 : ',25)
+    print('%s : %d' %('나이',25))
+    print('강아지'+'고양이')
+    print('Dog'*5)
     
 hello()
