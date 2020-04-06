@@ -46,15 +46,14 @@
     ref 함수에서는 매개변수 n을 통해 인자의 레퍼런스 값 즉 x를 받는다
     이를 값에 의한 전달(pass-by-value)라고 부른다
     ex)
-'''     
-python
+```python
     def main():
         x = 1
         ref(x)
     def ref(n):
         n += 1
         print(n) => 2
-'''
+```
 
 ### 파이썬에서 블럭의 의미
  - 명령어들을 묶는 단위
