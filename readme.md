@@ -275,3 +275,10 @@ list.insert(위치값, data) # 리스트에 특정 위치에 데이터 삽입할수있다.
     a.clear()
     print(a)
 ```
+
+## List 내포 / 리스트 안에 for문 포함하기
+```python
+ex)
+result = [0 for a in range(5)] # result = [ 0, 0, 0, 0, 0]
+result = [num*3 for num in [1, 2, 3, 4] if num%2 == 0] # result = [6,12]
+```
