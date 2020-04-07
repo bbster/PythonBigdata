@@ -29,6 +29,9 @@
  - not in : 어떤 데이터가 특정 데이터안에 존재하는지 않는지 검사
              => 결과값은 True 또는 False
              => True : 존재하지 않음 False : 존재함
+             
+## 데이터 인덱싱, 슬라이싱
+ - 
 
 ## 아이덴티티 연산자
 
@@ -92,4 +95,62 @@ class 클래스명():
   변수
   명령어
 ```
-        
+
+```python
+# 다중 if else
+if 조건식 :
+    명령문
+else: 
+    if 조건식:
+        명령문
+    else:
+        if 조건식:
+            명령문
+        else:
+            명령문
+```
+
+## 초기 프로젝트 구조잡을때 API 명명과 pass를 통해 구조잡기
+
+## if 삼항 연산식
+```python
+    year = int(input('년도 입력 : '))
+    
+    if (year%4 == 0) and (year%100 != 0) or (year%400 == 0):
+        print(str(year) + '년은 윤년입니다.')
+    else:
+        print(str(year) + '년은 평년입니다.')
+```
+
+## 다중 if-else문 : elif
+```python
+    score = int(input("점수 입력 : "))
+    
+    if score >= 90:
+        print('A학점')
+    elif score >= 80:
+        print('B학점')
+    elif score >= 70:
+        print('C학점')
+    elif score >= 60:
+        print('D학점')
+    else:
+        print('F학점')
+```
+
+## if 삼향 연산식 사용: 문자열이 회문인지 아닌지 출력 
+```bash
+    b='abcdefghijklmnopqrstuvwxyz'
+    print(b[1:15:1]) # 왼쪽에서 오른쪽으로
+    print(b[15:1:-1]) # -붙었을때 오른쪽에서 왼쪽으로
+    print(b[:])
+    print(b[::-1])
+```
+```python
+    
+
+    a = 'abcdcba'
+    print(a, ': 회문' if a==a[::-1] else ':회문 아님')
+    
+```
+
