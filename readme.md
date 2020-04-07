@@ -147,10 +147,26 @@ else:
     print(b[::-1])
 ```
 ```python
-    
-
     a = 'abcdcba'
+    # (실행문이 참일때 ) if(조건식) (실행문이 참이 아닐때)
     print(a, ': 회문' if a==a[::-1] else ':회문 아님')
-    
 ```
 
+## 반복문
+ - for문: 횟수제어 반복
+ - while문: 조건제어 반복
+ 
+```python
+for 변수 in range(반복횟수):
+    명령문
+for 변수 in range(시작값, 종료값, 증감값):
+    명령문
+ # 순환 가능 객체: 문자열, 리스트, 튜플, 딕셔너리, range()
+for 변수 in 문자열:
+ 명령문
+for 변수 in 리스트:
+ 명령문
+for 변수 in dict:
+ 명령문
+```
+ 
