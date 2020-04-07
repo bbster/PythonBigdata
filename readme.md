@@ -169,4 +169,109 @@ for 변수 in 리스트:
 for 변수 in dict:
  명령문
 ```
- 
+## 자료구조 데이터 자료형
+ 1. 순서형 자료형
+   - 문자열, 튜플, 리스트
+ 2. 비순서형 자료형
+   - 세트, 딕셔너리
+
+```bash
+list = [1,2,3,4,5] # 데이터 변경 가능
+tup1 = (1,2,3,4,5) # 데이터 변경 불가능
+tup2 = 1,2,3,4,5
+set = {1,2,3,4,5} # 데이터 중복 x
+dic = {'a'=1, 'b'=2} # key:value 형식
+```
+## 자료형 Unpacking
+```bash
+tup1 = (1,2,3,5)
+print('{0} {1} {2} {3}'.format(*tup1))  # 1 2 3 4
+
+dict = {'a'=1, 'b'=2}
+print('{0} {1} {2} {3}'.format(*dict)  # a b
+print('{} {} {} {}'.format(*dict))  # a b
+print('{a} {b}'.format(**dict))  # 1 2
+```
+
+## List 메소드 사용법
+
+```bash
+list.index(data) # 리스트에 있는 data위치를 알려줌
+list.append(data) # 리스트 끝에 데이터를 추가한다
+list.sort(변수, reverse=True) # 리스트 데이터를 오름차순 정렬 / reverse=True 내림차순 정렬
+list.pop() # 리스트 맨 마지막 요소를 돌려주고 그 요소를 삭제한다
+list.insert(위치값, data) # 리스트에 특정 위치에 데이터 삽입할수있다.
+```
+## List 데이터 변경
+```python
+    list1 = [1,2,3]
+    print(list1)
+    
+    # 인덱싱으로 변경 / 단일 데이터 변경
+    list1[2] = 40
+    print(list1)
+    list1[1] = ['a', 'b', 'c']
+    print(list1)
+    
+    # 슬라이싱으로 변경 / 복수 데이터 변경
+    list1[1:2] = ['a', 'b', 'c']
+    print(list1)
+    list1.append('d')
+    print(list1)
+    
+    list1[1:3] = 10,20
+    print(list1)
+```
+
+## List 데이터 처리
+```python
+    a = ['국어', '영어', '수학', '사회', '한국']
+    print(a)
+    
+    a[3] = '과학'
+    print(a)
+    
+    a.append('세계사')
+    print(a)
+    
+    a.insert(2,'일본어')
+    print(a)
+    
+    print('='*60)
+    
+    # 정렬 : 원본 리스트는 바뀌지 않음
+    # 파이썬 내장함수 사용
+    print(sorted(a)) # 기본: 오름차순 정렬
+    print(sorted(a, reverse=True)) # 내림차순 정
+    print(a)
+    print('='*60)
+    
+    # 정렬 : 원본 리스트는 바뀜
+    # 리스트의 내장함수 사용
+    a.sort() # 기본 오름차순
+    print(a)
+    
+    a.sort(reverse=True) # 내림차순
+    print(a)
+    
+    print('='*60)
+    
+    # 리스트 데이터 삭제
+    # 파이썬 내장함수
+    # 인덱싱 방법
+    del(a[4])
+    print(a)
+    
+    # 슬라이싱 방법
+    del(a[0:2])
+    print(a)
+    
+    # 리스트 내장함수
+    # 리스트 내 단일 데이터 삭제
+    a.remove('영어')
+    print(a)
+    
+    # 리스트 내 모든 데이터 삭제
+    a.clear()
+    print(a)
+```

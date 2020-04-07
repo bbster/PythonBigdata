@@ -9,5 +9,8 @@ def exam1():
         
     print(a)
     print('-'*30)
+    
+    for x in range(1, 11, 2) :
+        print(x, end=" ")
 
 exam1()
