@@ -518,14 +518,14 @@ s2.set()
 
 ```
 ## 생성자
-## 클래스 멤버의 접근제한
+### 클래스 멤버의 접근제한
  - 파이썬에서는 기본적으로 public으로 설정되어있다.
  - 멤버 변수를 private으로 설정하는 방법
 ```python
 __name # 클래스 안에서 외부로 노출되지 않는 이름으로 인식
 __name__ # 앞뒤로__가 붙어있는 이름은 시스템에서 정의한 이름
 ```
-## getter / setter
+### getter / setter
  - getter : 멤버변수 앞에 get을 붙여서 만든 함수 / 멤버변수값 리턴
  - setter : 멤버변수 앞에 set을 붙여서 만듬 함수 / 멤버변수에 값 저장
 ```python
@@ -554,7 +554,7 @@ print(t2.getArea())
 
 ```
  
-## __str__
+### __str__
  - 객체명을 print()로 출력하면 자동 호출되는 메소드
 ```python
 class Car :
@@ -591,8 +591,7 @@ __str__호출
 '''
 ```
 
-## 상속
-
+### 상속
 ```python
 class Article:
     
@@ -632,6 +631,5 @@ qna.num = 1
 qna.title = '첫번째 질문입니다.'
 qna.answer = '첫번째 답변입니다.'
 print(qna)
-print('-'*30)
-
+print('-'*30)\
 ```
