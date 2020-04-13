@@ -455,7 +455,7 @@ with open("x.txt") as f:
     do something
 ```
 
-## 클래스
+## 파이썬 클래스
 ```python
 class HelloWorld:
     message = 0                       # 클래스 변수
@@ -517,7 +517,79 @@ s1.set()  # s1.set(s1) : 멤버함수를 호출하면, 호출하는 객체가 전달
 s2.set()
 
 ```
-## Python self 탐구
-```bash
+## 생성자
+## 클래스 멤버의 접근제한
+ - 파이썬에서는 기본적으로 public으로 설정되어있다.
+ - 멤버 변수를 private으로 설정하는 방법
+```python
+__name # 클래스 안에서 외부로 노출되지 않는 이름으로 인식
+__name__ # 앞뒤로__가 붙어있는 이름은 시스템에서 정의한 이름
+```
+## getter / setter
+ - getter : 멤버변수 앞에 get을 붙여서 만든 함수 / 멤버변수값 리턴
+ - setter : 멤버변수 앞에 set을 붙여서 만듬 함수 / 멤버변수에 값 저장
+```python
+class Triangle():
+    # 생성자
+    def __init__(self, high=0, under=0): # 매개변수 2개를 초기화시키고
+        self.high = high # 매개변수 할당
+        self.under = under # 매개변수 할당
+        
+    # 삼각형 넓이 리턴
+    # setter
+    def setTriangle(self, high, under): # 데이터를 저장할 매개변수 두개를 받고
+        self.high = high # 할당
+        self.under = under # 할당
+      
+    # 밑변 높이 대입
+    # getter
+    def getArea(self):
+        return self.high * self.under
+        
+t1 = Triangle(45, 7) # t1.__init__(45,7)
+print(t1.getArea())
+
+t2 = Triangle(5,3)  # t2.__init__(5,3)
+print(t2.getArea())
 
 ```
+ 
+## __str__
+ - 객체명을 print()로 출력하면 자동 호출되는 메소드
+```python
+class Car :
+    def __init__(self, speed=0, color=0, model=0):
+        print('__init__호출')
+        self.speed = speed
+        self.color = color
+        self.model = model
+        
+    # 일반적으로 모든 멤버변수를 확인하는 용도로 많이 사용
+    def __str__(self):
+        print('__str__호출')
+        return ('속도: {}, 색상:{}, 모델:{}'.format(self.speed, 
+                                                    self.color, self.model))    
+
+    def drive(self, speed):
+        self.speed = speed
+        
+car = Car(0, 'blue', 'E-Class')
+print(car)
+print('-'*30)
+print(car.__str__())
+print('-'*30)
+
+# 실행 결과
+'''
+__init__호출
+__str__호출
+속도: 0, 색상:blue, 모델:E-Class
+------------------------------
+__str__호출
+속도: 0, 색상:blue, 모델:E-Class
+------------------------------
+'''
+```
+
+## 상속
+
