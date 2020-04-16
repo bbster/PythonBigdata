@@ -664,7 +664,7 @@ print('-'*40)
 '''
 ```
 
-### matplotlib
+# matplotlib
 ```python
 # 간단한 그래프 출력 
 from matplotlib import pyplot as plt
@@ -672,7 +672,7 @@ import numpy as np
 
 data1 = 10,14,19,20,25
 
-# 리스트 내용을 그래프로 출
+# 리스트 내용을 그래프로 출력 
 plt.plot(data1)
 plt.show()
 
