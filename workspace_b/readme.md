@@ -720,3 +720,17 @@ plt.show()
   - columns: DataFrame의 가로축 라벨 / 열 / 변수
   - values: DataFrame의 데이터
   
+### Data 전처리 
+ - 데이터 가공
+ - 데이터 핸들링
+ - 데이터 클리닝
+```bash
+1. query - 컬럼 데이터중에 조건에 맞는 행 데이터 추출
+2. filter - 특정 컬럼 여러개 추출 / filter(['컬럼명','컬럼명'])
+3. drop - 행 또는 열을 삭제 / drop(행이름 or 리스트[,option])
+  - drop option -
+    inplace : 삭제 결과를 원본에 반영할지 결정 / False:True
+    axis
+      - axis = 0 : x축 / 행에 대한 적용 / 기본값
+      - axis = 1 : y축 / 열에 대한 적용
+```
