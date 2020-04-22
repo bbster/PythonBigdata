@@ -734,3 +734,4 @@ plt.show()
       - axis = 0 : x축 / 행에 대한 적용 / 기본값
       - axis = 1 : y축 / 열에 대한 적용
 ```
+ - enumerate: data를 dict형식으로 가져옴
