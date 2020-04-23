@@ -52,7 +52,7 @@ for i in outlier_index:
 print(data_result)
 print('-'*40)
 
-# 변경된 결츠치 정제
+# 변경된 결치 정제
 # 결측치에 대해 평균점수 부여 
 # 63점 하나밖에 없어서 Nan 값이 모두 63점으로 들어
 result_simple_imp1 = simple_imp.fit_transform(data_result.values)
