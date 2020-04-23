@@ -735,3 +735,7 @@ plt.show()
       - axis = 1 : y축 / 열에 대한 적용
 ```
  - enumerate: data를 dict형식으로 가져옴
+ 
+### 결측값 대치
+ - 평균값, 중앙값, 최빈값으로 대치
+ - use SimpleImputer
