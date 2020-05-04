@@ -1,32 +1,41 @@
 import requests
 import json
-from pandas import DataFrame as df
-from matplotlib import pyplot as plt
-from matplotlib.image import imread
+from pandas import DataFrame
 
-simple_text_url = 'http://192.168.0.96/simple.json'
+simple_json_url = "http://192.168.0.96/simple.json"
 
-r = requests.get(simple_text_url)
+r = requests.get(simple_json_url)
 
-print(r)
-print('-'*40)
-
-if r.status_code != 200:
+if r.status_code != 200 :
     print('[%d Error] %s' %(r.status_code, r.reason))
     quit()
-
+    
+print(r.text)
+print('-' * 30)
 
 result = json.loads(r.text)
 print(result)
-print('-'*40)
+print(type(result))
+print('-' * 30)
 
-data = df([result])
-print(data)
-print('-'*40)
+df = DataFrame([result])
+print(df)
+print('-' * 30)
 
-img = imread(data.loc[0, 'img'])
+from matplotlib import pyplot
+from matplotlib.image import imread
+
+img = imread(df.loc[0, 'img'])
+pyplot.imshow(img)
+pyplot.axis('off')
+pyplot.show()
 
 
-plt.imshow(img)
-plt.axis('off')
-ply.show()
+
+
+
+
+
+
+
+
